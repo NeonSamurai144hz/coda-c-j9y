@@ -17,13 +17,10 @@ perso-> faith = 20;
 int main()  
 { 
     character *perso = malloc(sizeof(*perso));  
-    perso->name = malloc(strlen("Musashi") * sizeof(char));
-    perso->name = strcpy(perso->name, "Musashi");
-    fill_struct(perso);  
+    fill_struct(perso); 
   
-  printf("Your character's name is: %s.  Your character has:  %d vigor  %d agility  %d endurance  %d strenght  %d dexterity  %d intelligence  %d wisdom  %d faith\n", perso->name , perso->vigor, perso->agility, perso->endurance, perso->strenght, perso->dexterity, perso->intelligence, perso->wisdom, perso->faith );
+  printf("Your character's ip is: %p Your character has:  %d vigor  %d agility  %d endurance  %d strenght  %d dexterity  %d intelligence  %d wisdom  %d faith\n", perso, perso->vigor, perso->agility, perso->endurance, perso->strenght, perso->dexterity, perso->intelligence, perso->wisdom, perso->faith );
 
-free(perso->name);
 free (perso);
 exit(0);
 }
